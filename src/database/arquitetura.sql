@@ -1,4 +1,4 @@
--- Active: 1675359864041@@127.0.0.1@3306
+-- Active: 1682426465693@@127.0.0.1@3306
 CREATE TABLE users (
     id TEXT PRIMARY KEY UNIQUE NOT NULL,
     name TEXT NOT NULL,
@@ -24,3 +24,19 @@ INSERT INTO accounts (id, owner_id)
 VALUES
 	("a001", "u001"),
 	("a002", "u002");
+
+
+CREATE TABLE courses (
+    id TEXT PRIMARY KEY UNIQUE NOT NULL,
+    name TEXT UNIQUE NOT NULL,
+    lessons INTEGER NOT NULL,
+    created_at TEXT NOT NULL
+);
+
+DROP TABLE courses;
+
+INSERT INTO courses (id, name, lessons, created_at)
+VALUES
+("c001", "Javascript", 5, DATETIME('now')),
+("c002", "React", 10, DATETIME('now')),
+("c003", "Typescript", 15, DATETIME('now'));

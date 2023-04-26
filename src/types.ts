@@ -26,3 +26,17 @@ export interface AccountDBPost {
     id: string,
     owner_id: string
 }
+
+export interface CourseDB {
+    id: string,
+    name: string,
+    lessons: number,
+    created_at: string
+}
+
+// tipagem para criação (POST) sem created_at
+export interface CourseDBPost {
+    id: string,
+    name: string,
+    lessons: number
+}
